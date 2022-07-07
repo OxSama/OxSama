@@ -25,6 +25,10 @@ Here are some ideas to get you started:
 namespace Mohammed;
 class About extends Me
 {
+    public function whoami(): string
+    { 
+      return '/user/MohammedTagEldinOsman';
+    }
     public function getCurrentWorkplace(): array
     {
         return [
