@@ -22,15 +22,21 @@ Here are some ideas to get you started:
 
 ```php
 <?php
-namespace AshBaker;
+namespace Mohammed;
 class About extends Me
 {
     public function getCurrentWorkplace(): array
     {
         return [
-            'workplace' => [
-                'company' => 'Qquicker',
-                'position' => 'Founder'         
+            'workplaces' => [
+                [
+                  'company' => 'Sudan University for Science and Technology',
+                  'position' => 'TA'    
+                ],
+                [
+                  'company' => 'Nile University',
+                  'position' => 'TA'    
+                ]     
             ]
         ];
     }
