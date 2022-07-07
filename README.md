@@ -34,10 +34,6 @@ Here are some ideas to get you started:
   <img src="https://komarev.com/ghpvc/?username=OxSama&style=flat-square&color=red" alt=""/>
 </div>
 
-<div align="center">
-  <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"/>
-</div>
-
 
 <div align="center">
   <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
@@ -67,3 +63,10 @@ Here are some ideas to get you started:
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=OxSama&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=OxSama&theme=dark&background=000000)](https://git.io/streak-stats)
+
+<hr>
+
+<div align="center">
+  <img src="https://media.giphy.com/media/KyIaRm6jYlAGyJ86zH/giphy.gif" width="600" height="300"/>
+</div>
+
