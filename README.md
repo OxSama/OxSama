@@ -22,14 +22,14 @@ Here are some ideas to get you started:
 
 ```php
 <?php
-namespace Mohammed;
+namespace OxSama;
 class About extends Me
 {
     public function whoami(): string
     { 
-      return '/user/MohammedTagEldinOsman';
+      return 'MohammedTagEldinAli';
     }
-    public function getCurrentWorkplace(): array
+    public function getCurrentWorkplaces(): array
     {
         return [
             'workplaces' => [
