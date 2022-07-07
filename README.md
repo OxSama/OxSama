@@ -61,7 +61,7 @@ class About extends Me
 ```
 
 
-
+<hr>
 
 
 <div id="badges" align="center">
