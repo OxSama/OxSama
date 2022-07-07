@@ -32,11 +32,7 @@ class About extends Me
                 [
                   'company' => 'Sudan University for Science and Technology',
                   'position' => 'TA'    
-                ],
-                [
-                  'company' => 'Nile University',
-                  'position' => 'TA'    
-                ]     
+                ] 
             ]
         ];
     }
@@ -46,16 +42,22 @@ class About extends Me
             Php::class,
             Javascript::class,
             Laravel::class,
-            Vuejs::class,
-            Angular::class,
-            ReactNative::class,
+            ReactJS::class,
+            ShellScripting::class,
+            Java::class,
             TailwindCss::class,
-            Aws::class,
+            Flutter::class,
+            Linux::class,
         ];
     }
-    public function getFutureGoal(): string
+    public function getAskMeAbout(): array
     {
-        return 'To contribute to open source.';
+        return [
+          Linux::class,
+          Docker::class,
+          ShellScripting::class,
+          Laravel::class,
+        ];
     }
 }
 ```
