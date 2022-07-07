@@ -29,6 +29,10 @@ class About extends Me
     { 
       return 'MohammedTagEldinAli';
     }
+    public function getAge(): int 
+    {
+      return (idate("Y") % 2000) + 1;
+    }
     public function getCurrentWorkplaces(): array
     {
         return [
