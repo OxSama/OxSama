@@ -18,6 +18,46 @@ Here are some ideas to get you started:
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100" />
 </div> -->
 
+
+
+```php
+<?php
+namespace AshBaker;
+class About extends Me
+{
+    public function getCurrentWorkplace(): array
+    {
+        return [
+            'workplace' => [
+                'company' => 'Qquicker',
+                'position' => 'Founder'         
+            ]
+        ];
+    }
+    public function getDailyKnowledge(): array
+    {
+        return [
+            Php::class,
+            Javascript::class,
+            Laravel::class,
+            Vuejs::class,
+            Angular::class,
+            ReactNative::class,
+            TailwindCss::class,
+            Aws::class,
+        ];
+    }
+    public function getFutureGoal(): string
+    {
+        return 'To contribute to open source.';
+    }
+}
+```
+
+
+
+
+
 <div id="badges" align="center">
   <a href="https://www.linkedin.com/in/mohamed-taj-eldin-b510791bb/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
@@ -34,6 +74,7 @@ Here are some ideas to get you started:
   <img src="https://komarev.com/ghpvc/?username=OxSama&style=flat-square&color=red" alt=""/>
 </div>
 
+<hr>
 
 <div align="center">
   <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
@@ -62,6 +103,7 @@ Here are some ideas to get you started:
 <hr>
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=OxSama&theme=react)](https://github.com/anuraghazra/github-readme-stats)
+
 
 
 <hr>
