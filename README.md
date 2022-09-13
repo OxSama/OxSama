@@ -40,6 +40,14 @@ class About extends Me
                 [
                   'company' => 'Sudan University for Science and Technology',
                   'position' => 'TA'    
+                ],
+                [
+                  'company' => 'Nile University',
+                  'position' => 'TA'    
+                ],
+                [
+                  'company' => 'Maxnet Digital Services',
+                  'position' => 'Intern Software Engineer'    
                 ] 
             ]
         ];
