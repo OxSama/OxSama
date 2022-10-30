@@ -25,7 +25,7 @@ Here are some ideas to get you started:
 namespace OxSama;
 class About extends Me
 {
-    public function whoami(): string
+    public function whoami(): String
     { 
       return 'MohammedTagEldinAli';
     }
