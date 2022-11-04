@@ -59,6 +59,7 @@ class About extends Me
             Javascript::class,
             Laravel::class,
             ReactJS::class,
+            VueJS::class,
             ShellScripting::class,
             Java::class,
             TailwindCss::class,
