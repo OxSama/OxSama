@@ -47,7 +47,7 @@ class About extends Me
                 ],
                 [
                   'company' => 'Maxnet Digital Services',
-                  'position' => 'Intern Software Engineer'    
+                  'position' => 'Software Engineer'    
                 ] 
             ]
         ];
