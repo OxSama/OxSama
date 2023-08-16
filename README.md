@@ -38,10 +38,6 @@ class About extends Me
         return [
             'workplaces' => [
                 [
-                  'company' => 'Sudan University for Science and Technology',
-                  'position' => 'TA'    
-                ],
-                [
                   'company' => 'Nile University',
                   'position' => 'TA'    
                 ],
