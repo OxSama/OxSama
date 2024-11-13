@@ -36,18 +36,33 @@ class About extends Me
     public function getCurrentWorkplaces(): array
     {
         return [
-            'workplaces' => [
+            'previousWorkplaces' => [
                 [
-                  'company' => 'Nile University',
-                  'position' => 'TA'    
-                ],
-                [
-                  'company' => 'Maxnet Digital Services',
-                  'position' => 'Software Engineer'    
-                ] 
+                  'company' => 'Polaris Technology LLC',
+                  'position' => 'Senior Software Engineer'    
+                ]
             ]
         ];
     }
+  public function getPreviousWorkPlaces(): array
+      {
+          return [
+              'workplaces' => [
+                  [
+                    'company' => 'Maxnet Digital Services',
+                    'position' => 'Software Engineer'    
+                  ],
+                  [
+                    'company' => 'Nile University',
+                    'position' => 'TA'    
+                  ],
+                  [
+                    'company' => 'Sudan University For Science & Technology',
+                    'position' => 'TA'    
+                  ],
+              ]
+          ];
+      }
     public function getDailyKnowledge(): array
     {
         return [
