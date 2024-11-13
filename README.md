@@ -36,7 +36,7 @@ class About extends Me
     public function getCurrentWorkplaces(): array
     {
         return [
-            'previousWorkplaces' => [
+            'workplaces' => [
                 [
                   'company' => 'Polaris Technology LLC',
                   'position' => 'Senior Software Engineer'    
@@ -47,7 +47,7 @@ class About extends Me
   public function getPreviousWorkPlaces(): array
       {
           return [
-              'workplaces' => [
+              'previousWorkplaces' => [
                   [
                     'company' => 'Maxnet Digital Services',
                     'position' => 'Software Engineer'    
