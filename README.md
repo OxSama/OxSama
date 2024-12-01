@@ -25,6 +25,9 @@ Here are some ideas to get you started:
 namespace OxSama;
 class About extends Me
 {
+    private const GITHUB_URL = 'https://github.com/OxSama';
+    private const LINKEDIN_URL = 'https://www.linkedin.com/in/oxsama/';
+
     public function whoami(): String
     { 
       return 'MohammedTagEldinAli';
