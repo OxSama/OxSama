@@ -22,72 +22,170 @@ Here are some ideas to get you started:
 
 ```php
 <?php
+
 namespace OxSama;
-class About extends Me
+
+class About extends Me implements \JsonSerializable
 {
     private const GITHUB_URL = 'https://github.com/OxSama';
     private const LINKEDIN_URL = 'https://www.linkedin.com/in/oxsama/';
 
-    public function whoami(): String
-    { 
-      return 'MohammedTagEldinAli';
-    }
-    public function getAge(): int 
-    {
-      return (idate("Y") % 2000) + 1;
-    }
-    public function getCurrentWorkplaces(): array
+    public function whoami(): array
     {
         return [
-            'workplaces' => [
-                [
-                  'company' => 'Polaris Technology LLC',
-                  'position' => 'Senior Software Engineer'    
+            'name' => 'Mohammed Tag Eldin Ali',
+            'title' => 'Senior Software Engineer',
+            'location' => 'UAE',
+        ];
+    }
+
+    public function getCurrentWorkplace(): array
+    {
+        return [
+            'company' => 'Polaris Technology LLC',
+            'position' => 'Senior Software Engineer',
+            'duration' => $this->calculateDuration('2024-07'),
+            'responsibilities' => [
+                'Developing enterprise applications',
+                'Code review',
+                'Implementing secure development practices',
+            ]
+        ];
+    }
+
+    public function getPreviousWorkplaces(): array
+    {
+        return [
+            [
+                'company' => 'Maxnet Digital Services',
+                'position' => 'Software Engineer',
+                'duration' => '2022-2023',
+                'highlights' => [
+                    'Developed and maintained multiple web applications',
+                    'Implemented automated testing practices',
+                    'Collaborated with the Sudanese banks on payment and digital transformation solutions',
+                ]
+            ],
+            [
+                'company' => 'Nile University',
+                'position' => 'Teaching Assistant',
+                'duration' => '2022-2023',
+                'highlights' => ['Taught programming fundamentals and provided mentorship to students']
+            ],
+            [
+                'company' => 'Sudan University For Science & Technology',
+                'position' => 'Teaching Assistant',
+                'duration' => '2022-2023',
+                'highlights' => ['Assisted in teaching computer science courses and labs']
+            ]
+        ];
+    }
+
+    public function getTechnicalSkills(): array
+    {
+        return [
+            'languages' => [
+                'PHP' => ['Laravel'],
+                'JavaScript' => ['React', 'Vue.js', 'Node.js'],
+                'Java' => ['Spring Boot'],
+                'Dart' => ['Flutter'],
+                'Python' => ['Django']
+            ],
+            'databases' => [
+                'MySQL',
+                'PostgreSQL',
+                'MongoDB',
+                'Redis'
+            ],
+            'devops' => [
+                'Docker',
+                'GitHub Actions'
+            ],
+            'tools' => [
+                'Git',
+                'Linux',
+                'Apache'
+            ]
+        ];
+    }
+
+    public function getExpertise(): array
+    {
+        return [
+            'Backend Development' => [
+                'RESTful APIs',
+                'Microservices',
+                'Database Design',
+                'Performance Optimization',
+                'Secure Development Practices',
+            ],
+            'Frontend Development' => [
+                'SPA Architecture',
+                'State Management',
+                'UI/UX Implementation'
+            ],
+            'DevOps' => [
+                'CI/CD Pipeline Setup',
+                'Server Configuration',
+                'Monitoring & Logging'
+            ]
+        ];
+    }
+
+    public function getEducation(): array
+    {
+        return [
+            [
+                'degree' => 'Bachelor of Science in Computer Science',
+                'university' => 'Sudan University For Science & Technology',
+                'year' => '2022',
+                'achievements' => [
+                    'First Class Honours'
                 ]
             ]
         ];
     }
-  public function getPreviousWorkPlaces(): array
-      {
-          return [
-              'previousWorkplaces' => [
-                  [
-                    'company' => 'Maxnet Digital Services',
-                    'position' => 'Software Engineer'    
-                  ],
-                  [
-                    'company' => 'Nile University',
-                    'position' => 'TA'    
-                  ],
-                  [
-                    'company' => 'Sudan University For Science & Technology',
-                    'position' => 'TA'    
-                  ],
-              ]
-          ];
-      }
-    public function getDailyKnowledge(): array
+
+    public function getContactInfo(): array
     {
         return [
-            Php::class,
-            Javascript::class,
-            Laravel::class,
-            ReactJS::class,
-            VueJS::class,
-            ShellScripting::class,
-            Java::class,
-            TailwindCss::class,
-            Flutter::class,
-            Linux::class,
+            'email' => 'mohamed@oxsama.com',
+            'linkedin' => self::LINKEDIN_URL,
+            'github' => self::GITHUB_URL
         ];
     }
-    public function getAskMeAbout(): array
+
+    private function calculateDuration(string $startDate): string
+    {
+        $start = new \DateTime($startDate);
+        $now = new \DateTime();
+        $interval = $start->diff($now);
+
+        $years = $interval->y;
+        $months = $interval->m;
+
+        if ($years > 0) {
+            return sprintf('%d year%s %d month%s',
+                $years,
+                $years > 1 ? 's' : '',
+                $months,
+                $months > 1 ? 's' : ''
+            );
+        }
+
+        return sprintf('%d month%s', $months, $months > 1 ? 's' : '');
+    }
+
+    public function jsonSerialize(): array
     {
         return [
-          Linux::class,
-          Docker::class,
-          ShellScripting::class,
-          Laravel::class,
+            'about' => $this->whoami(),
+            'current_workplace' => $this->getCurrentWorkplace(),
+            'previous_workplaces' => $this->getPreviousWorkplaces(),
+            'technical_skills' => $this->getTechnicalSkills(),
+            'expertise' => $this->getExpertise(),
+            'education' => $this->getEducation(),
+            'contact' => $this->getContactInfo()
         ];
     }
 }
