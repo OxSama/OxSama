@@ -249,7 +249,9 @@ class About extends Me implements \JsonSerializable
 
 <hr>
 
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=OxSama&theme=react)](https://git.io/streak-stats)
+#[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=OxSama&theme=react)](https://git.io/streak-stats)
+
+[![GitHub Streak](https://streak-stats.demolab.com/?user=OxSama)](https://git.io/streak-stats)
 
 <hr>
 
